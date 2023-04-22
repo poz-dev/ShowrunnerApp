@@ -12,29 +12,7 @@ class Shows {
         var show: Show
     }
     
-    struct Show: Codable {
-        var name: String
-        var language: String?
-        var summary: String?
-        var genres: [String]?
-        var rating: Rating?
-        var network: Network?
-        var image: Image?
-    }
-    
-    struct Rating: Codable {
-        var average: Double?
-    }
-    
-    struct Network: Codable {
-        var name: String
-    }
-    
-    struct Image: Codable {
-        var original: String?
-    }
-    
-    var urlString = "https://api.tvmaze.com/search/shows?q=alien"
+    var urlString = "https://api.tvmaze.com/search/shows?q="
     var showArray: [Returned] = []
     
     // MARK: - Get data function
